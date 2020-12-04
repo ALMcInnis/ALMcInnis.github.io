@@ -1,0 +1,156 @@
+@font-face {font-family: "NTF Grand"; 
+src: url(../../fonts/NTF-Grand-Regular.otf) format("opentype"),
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot"); 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot?#iefix") format("embedded-opentype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff2") format("woff2"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff") format("woff"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.ttf") format("truetype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.svg#NTF-Grand-Regular") format("svg"); 
+	 }
+	 
+:root{
+	scroll-behavior:smooth;
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family:NTF Grand,sans-serif;
+	background-color:#113;
+	font-variant-numeric:tabular-nums;
+	transition:background .2s;
+}
+
+section.slide-wrapper{
+	display:flex;
+	width:90%;
+	margin:15vh auto;
+	align-items:center;
+	color:#fff;
+	transition:color .2s;
+	flex-direction:column;
+}
+
+div.hex-display{
+	font-size:30vmin;
+	margin:2vh 0vh;
+}
+
+div.slide-container{
+	margin-bottom:2vh;
+}
+
+div.slide-number-display{
+	margin-bottom:1vh;
+}
+
+div.slide-container, 
+div.slide-number-display, 
+div.slide-container-display{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	width:100%;
+}
+
+div.slide-number-display > div{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:100%;
+	margin:0px 15px;
+	font-size:1.3em;
+}
+
+div.view{
+	display:flex;
+	width:100%;
+	align-items:flex-start;
+	margin:0px 15px;
+}
+
+div.color-name{
+	font-size:2em;
+	letter-spacing:1px;
+	text-align:center;
+	margin: 1vh 15px 0 15px;
+}
+
+span.display{
+	display:block;
+	margin-left:-22px;
+	margin-bottom:20px;
+	position:relative;
+	background:transparent;
+	border-radius:50%;
+	border:2px solid;
+	font-size:1.3em;
+	padding:5px;
+	font-variant-numeric:tabular-nums;
+	box-sizing:border-box;
+	width:42px;
+	height:42px;
+	text-align:center;
+	transition:border-color .2s;
+}
+
+input[type="range"]{
+	appearance:none;
+	width:80%;
+	height:5px;
+	outline:none;
+	border-radius:10px;
+	margin:0px 15px;
+	transition: background-color .2s;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+	appearance:none;
+	height:30px;
+	width:10px;
+	border-radius:5px;
+	background-color:#fff;
+	transition: background-color .2s;
+}
+
+input[type="range"]::-moz-range-thumb{
+	appearance:none;
+	height:30px;
+	width:10px;
+	border-radius:5px;
+	background-color:#fff;
+	transition: background-color .2s;
+}
+
+input[type="range"].slider-black::-webkit-slider-thumb{
+	background-color:#333;
+}
+
+input[type="range"].slider-black::-moz-range-thumb{
+	background-color:#333;
+}
+
+button.reset{
+	border-radius:10px;
+	display:inline-block;
+	border:2px solid;
+	padding: .5rem 1rem;
+	font-family:inherit;
+	color:inherit;
+	background:transparent;
+	box-shadow:none;
+	font-size:5vmin;
+	margin:5vh 1em 1em;
+}
+
+button.reset:focus{
+	outline:none;
+}
+
+.btn-row{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:space-around;
+	box-sizing:border-box;
+}

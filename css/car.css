@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #224;
+}
+
+.wrapper {
+  width: 60em;
+  min-height: 25em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2em auto;
+  font-family: consolas, Inconsolata, sans-serif;
+}
+.wrapper div {
+  position: relative;
+}
+.wrapper .card {
+  min-height: 25em;
+  width: 16.6666666667em;
+  transition: 0.25s;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75);
+}
+.wrapper .card:hover .title .fab,
+.wrapper .card:hover .title .fa,
+.wrapper .card:hover .title h4 {
+  color: white;
+}
+.wrapper .card:hover .title.title-1 {
+  background: #02c68f;
+}
+.wrapper .card:hover .title.title-2 {
+  background: #ff056f;
+}
+.wrapper .card:hover .title.title-3 {
+  background: #007fff;
+}
+.wrapper .card:hover .link {
+  background: white;
+}
+.wrapper .card:hover .link.l-1 p {
+  color: #02c68f;
+}
+.wrapper .card:hover .link.l-1 a {
+  background: #02c68f;
+}
+.wrapper .card:hover .link.l-2 p {
+  color: #ff056f;
+}
+.wrapper .card:hover .link.l-2 a {
+  background: #ff056f;
+}
+.wrapper .card:hover .link.l-3 p {
+  color: #007fff;
+}
+.wrapper .card:hover .link.l-3 a {
+  background: #007fff;
+}
+.wrapper .card .title {
+  background: #334;
+  min-height: 16.6666666667em;
+  transition: inherit;
+}
+.wrapper .card .title .fab,
+.wrapper .card .title .fa,
+.wrapper .card .title .far,
+.wrapper .card .title .fas,
+.wrapper .card .title h4 {
+  text-align: center;
+  color: #efefef;
+  padding: 0.2em;
+}
+.wrapper .card .title .fab,
+.wrapper .card .title .fa,
+.wrapper .card .title .far,
+.wrapper .card .title .fas {
+  font-size: 6em;
+  padding: 0.2em 0;
+  width: 100%;
+}
+.wrapper .card .title h4 {
+  font-size: 2em;
+}
+.wrapper .card .link {
+  background: #efefef;
+  min-height: 8.3333333333em;
+  color: #333;
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+.wrapper .card .link p,
+.wrapper .card .link a {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em;
+  transition: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.wrapper .card .link p {
+  margin: 0;
+}
+.wrapper .card .link a {
+  display: inline-block;
+  width: 90%;
+  margin: 0.5em;
+  color: white;
+  background: #334;
+}
+
+/*# sourceMappingURL=car.css.map */
