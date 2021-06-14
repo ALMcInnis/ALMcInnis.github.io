@@ -178,11 +178,6 @@ ul.navbar-nav>li>a,.navbar-header>a{
 	font-size:1.1em;
 }
 
-.carousel-inner>.item>img{
-	max-width:33% !important;
-	max-height:33% !important;
-	margin:25px auto;
-}
 
 h3{
 	text-transform:uppercase;
