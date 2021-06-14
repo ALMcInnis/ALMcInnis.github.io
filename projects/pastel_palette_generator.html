@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Pastel Palette Generator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<style>
+@font-face {font-family: "NTF Grand"; 
+src: url(../fonts/NTF-Grand-Regular.otf) format("opentype"),
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot"); 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot?#iefix") format("embedded-opentype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff2") format("woff2"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff") format("woff"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.ttf") format("truetype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.svg#NTF-Grand-Regular") format("svg"); 
+	 }
+	 
+
+body{
+	display:flex;
+	flex-direction:column;
+	height:90vh;
+	width:100%;
+	align-content:center;
+	justify-content:center;
+	padding:0;
+	margin:0;
+	background:#115;
+}
+
+.grid-container{
+	display:grid;
+	grid-template-columns:repeat(4,25%);
+	height:100%;
+	width:100%;
+	margin:auto;
+}
+
+button{
+	display:block;
+	margin:1em auto;
+	background:transparent;
+	font-family: NTF Grand, sans-serif;
+	border:1px solid white;
+	color:white;
+	font-size:2em;
+	border-radius:20px;
+	align-items:center;
+	padding:.23em;
+	cursor:pointer;
+	transition:border-width .2s;
+}
+
+button:hover{
+	border-width:2px;
+}
+
+ul{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+.fade{
+	animation:fade .4s ease;
+}
+
+@keyframes fade{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+
+li{
+	list-style-type:none;
+	padding:.5em 0;
+	text-align:center;
+	font-family:NTF Grand, sans-serif;
+	letter-spacing:3px;
+	font-size:1.25em;
+	font-variant-numeric:tabular-nums;
+	vertical-align:middle;
+	color:#669;
+	text-transform:uppercase;
+}
+</style>
+</head>
+
+<body>
+	<div class = "grid-container"></div>
+	<button class = "btn" type="button">Click to Change Palette</button>
+<script>
+	let grid = document.querySelector(".grid-container");
+	let colors = [];
+	let num = 4;
+	let size = 100;
+	let btn = document.querySelector('.btn');
+	btn.addEventListener('click',randomPalette);
+	
+	for (i = 0; i < num; i++){
+		let item = document.createElement('div');
+		
+		let ul = document.createElement("ul");
+		
+		let li = document.createElement("li");
+		li.setAttribute("class","hue");
+		
+		let liTwo = document.createElement("li");
+		liTwo.setAttribute("class","sat");
+		
+		let liThree = document.createElement("li");
+		liThree.setAttribute("class","lum");
+		
+		item.setAttribute('class','grid-item'),
+		Object.assign(item.style,{
+			transitionDelay:`${i*.05}s`,
+			transitionDuration:"0.1s",
+			})
+		ul.appendChild(li);
+		ul.appendChild(liTwo);	
+		ul.appendChild(liThree);
+		item.appendChild(ul);
+		grid.appendChild(item);
+	}
+	
+	let minSat = 90;
+	let diff = 100 - minSat;
+	var hueArray = [];
+	var satArray = [];
+	var lumArray = [];
+	for (i = 0; i < 100; i++){
+		var hslArray = [(Math.floor(Math.random()*360)),minSat + (Math.floor(Math.random()*diff)),minSat + (Math.floor(Math.random()*diff))];
+		var bgColor = "hsl" + "(" + hslArray[0] + "," + hslArray[1] + "%" + "," + hslArray[2] + "%" + ")" ;
+		colors.push(bgColor);
+		hueArray.push(hslArray[0]);
+		satArray.push(hslArray[1]);
+		lumArray.push(hslArray[2]);
+	}
+	
+	let items = document.querySelectorAll(".grid-item");
+	let hueList = document.querySelectorAll(".hue");
+	let satList = document.querySelectorAll(".sat");
+	let lumList = document.querySelectorAll(".lum");
+	let ulList = document.querySelectorAll("ul");
+	
+	function randomPalette(){
+		for (i = 0; i < items.length; i++){
+			let cal = (Math.floor(Math.random()*100));
+			Object.assign(items[i].style,{
+				backgroundColor:colors[cal],
+			})
+			hueList[i].innerText = "Hue:" + hueArray[cal];
+			satList[i].innerText = "Saturation:" + satArray[cal] + "%";
+			lumList[i].innerText = "Lumosity:" + lumArray[cal] + "%";
+			ulList[i].classList.add("fade");
+			}
+			setTimeout(function(){
+				let i = 0;
+				for (i; i < ulList.length; i++){
+				ulList[i].classList.remove("fade");
+				}
+			},700);
+	}
+randomPalette();
+</script>
+
+</body>
+</html>

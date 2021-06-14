@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Random Background Button</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<style>
+@font-face {font-family: "NTF Grand"; 
+src: url(../fonts/NTF-Grand-Regular.otf) format("opentype"),
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot"); 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot?#iefix") format("embedded-opentype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff2") format("woff2"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff") format("woff"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.ttf") format("truetype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.svg#NTF-Grand-Regular") format("svg"); 
+	 }
+
+body{
+	height:90vh;
+	background-color:#aaa;
+}
+
+#title{
+	font-size:3em;
+	letter-spacing:1px;
+	font-family:NTF Grand;
+	font-variant-numeric:tabular-nums;
+	text-align:center;
+}
+
+.button-container{
+	margin:auto;
+	padding:1em;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:90%;
+	height:100%;
+	position:relative;
+}
+
+.button{
+	margin:auto;
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	border:10px solid;
+	border-right:10px solid;
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	position:relative;
+}
+.hex, 
+.button{
+	cursor:pointer;
+}
+
+.button{
+	animation:spin 6s infinite linear;
+}
+
+@keyframes spin{
+	to{transform:rotate(360deg);}
+}
+
+body,
+.button{
+	transition:background .25s;
+}
+
+.hex{
+	text-align:center;
+	margin:0 auto;
+	font-size:3em;
+	letter-spacing:1px;
+	font-family:NTF Grand;
+	font-variant-numeric:tabular-nums;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	position:absolute;
+	z-index:1;
+}
+
+</style>
+</head>
+
+<body>
+	<div class = "button-container">
+		<div id="hex" class="hex" onclick="changeBackground()"></div>
+		<div id="button" class="button" onclick="changeBackground()"></div>
+	</div>
+	<script>
+	let bg = document.body;
+	let hex = document.getElementById("hex");
+	let btn = document.getElementById("button");
+	let txt = document.querySelector(".title");
+	function randBackground(){
+		var val = [Math.floor(Math.random()*255),Math.floor(Math.random()*255),Math.floor(Math.random()*255)];
+		var yiq = ((val[0]*299)+(val[1]*587)+(val[2]*114))/1000;
+		var contrast = (yiq >= 140) ? '#222' : 'white';
+		var contrast2 = (yiq >= 140) ? 'rgba(34,34,34,.15)' : 'rgba(255,255,255,.15)';
+		var toHex = function (rgb){
+		var hex = Number(rgb).toString(16);
+		if (hex.length < 2) {
+			hex = "0" + hex;
+			}
+			return hex;
+		};
+		var hexValue = "#" + toHex(val[0]) + toHex(val[1]) + toHex(val[2]);
+		hex.innerHTML = hexValue;
+		hex.style.color = contrast;
+		btn.style.backgroundColor = hexValue||black;
+		btn.style.borderColor = contrast2;
+		btn.style.borderRightColor = contrast;
+	};
+	randBackground();
+	setInterval(randBackground,4000);
+		
+	function changeBackground(){
+		bg.style.backgroundColor = btn.style.backgroundColor;
+	};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Countdown Timer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<style>
+@font-face {font-family: "NTF Grand"; 
+src: url(../fonts/NTF-Grand-Regular.otf) format("opentype"),
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot"); 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.eot?#iefix") format("embedded-opentype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff2") format("woff2"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff") format("woff"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.ttf") format("truetype"), 
+	 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.svg#NTF-Grand-Regular") format("svg"); 
+	 }
+
+body{
+	margin:0;
+	padding:0;
+	background:repeating-linear-gradient(90deg, #00003333, 
+										 #00003333 10px, 
+										 transparent 10px, 
+										 transparent 20px)  
+										 0 0,#02134C;
+	background-size:200% 200%;
+}
+
+#timer{
+	font-family:NTF Grand,sans-serif;
+	font-variant-numeric:tabular-nums;
+	text-align:center;
+	margin:10vh auto;
+}
+
+.timer{
+	font-size:30vmin;
+	color:#fff;
+	text-shadow:-1px -1px 0px #2cf,
+				1px -1px 0px #2cf,
+				-1px 1px 0px #2cf,
+				1px 1px 0px #2cf,
+				0px 0px 15px #fff,
+				0px 0px 20px #5af,
+				0px 0px 25px #5af,
+				0px 0px 30px #5af,
+				0px 0px 35px #5af,
+				0px 0px 40px #5af;
+}
+
+#title{
+	font-size:20vmin;
+	color:white
+}
+</style>
+</head>
+
+<body>
+	<section id = "timer">
+		<div id = "title">COUNTDOWN UNTIL 2022!</DIV>
+		<div class ="timer"></div>
+	</section>
+<script>
+let deadline ='January 1 2022 00:00:00 GMT-05:00';
+	function getTimeRemaining(endtime){
+		let t = Date.parse(endtime) - Date.now();
+		var hundreth = Math.floor((t % 1000)/ 10);
+		var seconds = Math.floor((t / 1000) % 60);
+		var minutes = Math.floor((t / 1000 / 60) % 60);
+		var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+		var days = Math.floor(t / (1000 * 60 * 60 * 24));
+			
+		return{
+		'total':t,
+		'days': days,
+		'hours': hours,
+		'minutes': minutes,
+		'seconds': seconds
+		};
+	}
+		
+	function initializeClock(id, endtime){
+		var clock = document.getElementById(id);
+		var timerDisplay = document.querySelector(".timer");
+			function updateClock(){
+				var t	= getTimeRemaining(endtime);
+				timerDisplay.innerText = t.days + ":" + ('0' + t.hours).slice(-2) + ":" + ('0' + t.minutes).slice(-2) + ":" + ('0' + t.seconds).slice(-2) ;
+							
+				if(t.total<=0){
+					clearInterval(timeInterval);
+				}
+			}
+updateClock();
+let timeInterval = setInterval(updateClock,1000);
+}
+initializeClock("timer", deadline);
+
+</script>
+
+</body>
+</html>
