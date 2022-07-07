@@ -1,3 +1,7 @@
+root{
+--vanta-black:#224;
+}
+
 
 body{
 	font-family:serif;
@@ -8,6 +12,10 @@ body{
 nav.navbar{
 	margin-bottom:0px;
 	overflow:hidden;
+}
+
+ul.nav{
+	float:right;
 }
 
 .navbar{
@@ -93,7 +101,7 @@ ul.navbar-nav>li>a,.navbar-header>a{
 	width:100%;
 	display:block;
 	padding:1em .5em;
-	background:linear-gradient(to right, rgba(0,40,85,.3),rgba(0,40,85,.3)), url(../Icons/american_flag.jpg);
+	background:linear-gradient(to right, rgba(0,40,104,.8),rgba(0,40,104,.8)), url(../Icons/american_flag.jpg);
 	background-size:100% 100%;
 }
 
@@ -113,52 +121,44 @@ ul.navbar-nav>li>a,.navbar-header>a{
 .info-navbar{
 	-webkit-padding-start:0px;
 	display:block;
-	padding-top:10px;
 	width:50%;
 	margin:0 auto;
 }
 
 .info-navbar>li{
 	display:inline-block;
-	margin:.2em .625em;
+	margin:0em .5em;
 	list-style-type:none;
 }
 
 .info-navbar li a {
-	border-radius:30px;
-	background-color:#336;
 	display:block;
-	padding:.5em;
+	padding:.25em;
 	text-decoration:none;
 	color:#C0C0C0;
 	text-align:center;
 	width:60px;
-	transition:0.2s ease;
-}
-
-
-.info-navbar li a:hover{
-	color:white;
+	transition:all 0.1s ease-in;
 }
 
 .info-navbar li a.twitter:hover{
-	background:#11CAFF;
+	color:#11CAFF;
 }
 
 .info-navbar li a.linkedin:hover{
-	background:#007FFF;
+	color:#009FFF;
 }
 
 .info-navbar li a.deviantart:hover{
-	background:#00BFA9;
+	color:#00BFA9;
 }
 
 .info-navbar li a.codepen:hover{
-	background:#C0C9CF;
+	color:#F0F9FF;
 }
 
 .info-navbar li a.dribbble:hover{
-	background:#FF7321;
+	color:#FF7321;
 }
 
 #information>p{
@@ -297,7 +297,7 @@ h2{
 	}
 
 footer{
-	background:#114; 
+	background:var(--vanta-black); 
 	width:100%; 
 	min-height:20vh;
 	font-family:Consolas, Inconsolata, sans-serif;
@@ -307,6 +307,7 @@ footer{
 	display:inline-block;
 	width:100%;
 	box-sizing:border-box;
+	text-align:center;
 }
 
 .footer-wrapper>div{
