@@ -5,13 +5,13 @@ root{
 
 body{
 	font-family:serif;
-	font-size:150% !important;
 	color:white; 
 }
 
 nav.navbar{
 	margin-bottom:0px;
 	overflow:hidden;
+	padding:0;
 }
 
 ul.nav{
@@ -37,10 +37,11 @@ ul.nav{
 	border-bottom:none;
 }
 
-.navbar-nav>.active a:hover,
-.navbar-nav>.active a:focus,
-.navbar-nav>.active>a:hover,
-.navbar-nav >.active a{
+.navbar-brand{
+	color:white;
+}
+
+.nav-pills .nav-link.active,.nav-pills .show> .nav-link{
 	-webkit-transition:background .2s;
 	-moz-transition: background .2s;
 	background:#DD264f !important;
@@ -48,7 +49,15 @@ ul.nav{
 	color:white !important ;
   }
   
-.navbar-nav a:hover{
+.nav-pills  .nav-link{
+	border-radius:0px;
+	font-family:Calibri, sans-serif;
+	text-transform:uppercase;
+	font-size:1.2em;
+	color:white;
+}
+  
+.nav-pills  .nav-link a:hover{
 	-webkit-transition:background .2s;
 	-moz-transition: background .2s;
 	background:#DD264f !important;	
@@ -59,6 +68,10 @@ ul.nav{
 .navbar-nav{
 	list-style-type: none;
  } 
+ .navbar-toggler,.navbar-toggler:focus{
+	border:none;
+ }
+ 
  
 section.container-fluid{
 	text-align:center;
