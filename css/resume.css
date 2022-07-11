@@ -46,7 +46,7 @@ ul.nav{
   }
   
 .nav-pills  .nav-link{
-	border-radius:0px;
+	border-radius:0px !important;
 	font-family:Calibri, sans-serif;
 	text-transform:uppercase;
 	font-size:1.2em;
