@@ -1,7 +1,3 @@
-root{
---vanta-black:#224;
-}
-
 
 body{
 	font-family:serif;
@@ -310,7 +306,7 @@ h2{
 	}
 
 footer{
-	background:var(--vanta-black) !important; 
+	background:#224 !important; 
 	width:100%; 
 	min-height:20vh;
 	font-family:Consolas, Inconsolata, sans-serif;
