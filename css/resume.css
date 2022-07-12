@@ -1,7 +1,7 @@
 
 body{
 	font-family:serif;
-	color:white !important;  
+	color:white !important; 
 }
 
 nav.navbar{
@@ -60,7 +60,7 @@ ul.nav{
 	border:1px solid #DD264f !important;
 	color:white !important ;
  }
-
+ 
 .nav-link:focus,
 .nav-link:hover{
 	color:white !important;
@@ -69,8 +69,10 @@ ul.nav{
 .navbar-nav{
 	list-style-type: none;
  } 
- .navbar-toggler,.navbar-toggler:focus{
+ .navbar-dark .navbar-toggler,
+ .navbar-dark .navbar-toggler:focus{
 	border:none;
+	box-shadow:none;
  }
  
  
@@ -159,6 +161,10 @@ ul.navbar-nav>li>a,.navbar-header>a{
 	color:#11CAFF;
 }
 
+.info-navbar li a.facebook:hover{
+	color:#11CCFF;
+}
+
 .info-navbar li a.linkedin:hover{
 	color:#009FFF;
 }
@@ -191,7 +197,6 @@ ul.navbar-nav>li>a,.navbar-header>a{
 	height:100%;
 	font-size:1.1em;
 }
-
 
 h3{
 	text-transform:uppercase;
@@ -265,16 +270,21 @@ h3{
 	content:"Codepen";
 }
 
-h2{
-	font-family:Calibri !important;
+h2,h3{
+	font-family:Calibri,sans-serif !important;
 	letter-spacing:1px;
 	text-transform:uppercase;
-	font-size:4em !important;
+}
+h2{
+	font-size:3em !important;
+}
+h3{
+	font-size:2em !important;
 }
 
 .description{
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
 	flex-wrap:wrap;
 	align-items:center;
 	width:100%;
@@ -286,11 +296,11 @@ h2{
 }
 
 .date{
-	width:8%;
+	width:25%;
 }
 
 .job{
-	border-left:1px solid white;
+	border-top:1px solid white;
 	width:90%;
 }
 
@@ -311,7 +321,7 @@ h2{
 	}
 
 footer{
-	background:#224 !important; 
+	background:#224; 
 	width:100%; 
 	min-height:20vh;
 	font-family:Consolas, Inconsolata, sans-serif;
