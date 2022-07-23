@@ -461,4 +461,11 @@ footer{
 	width:90%;
 	margin:0 auto;
 	}
+	.gmail-link{
+	text-align:center;
+	font-size:1.5em !important;
+	background:var(--red);
+	border-radius:20px;
+	}
+
 }
