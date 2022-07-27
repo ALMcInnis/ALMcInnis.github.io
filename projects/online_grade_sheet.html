@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Online Grade Sheet</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<link rel="stylesheet" href="../css/projects.css">
+</head>
+
+<body class = "grade-r project">
+<div class ="container">
+	<section class = "grade-grid">
+		<div class = "grade-title"> 
+			ONLINE GRADESHEET
+		</div>
+		<div class = "gradesheet">
+			<div class = "column number">
+				<div class = "grade-title">#</div>
+				<div class = "row">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+					<div>8</div>
+					<div>9</div>
+					<div>10</div>
+				</div>
+			</div>
+			<div class = "column tests">
+				<div class = "grade-title">TESTS (40%)</div>
+				<div class = "row" id="tests">
+					<input class = "test" type = "number" value = "100"></input>
+					<input class = "test" type = "number"></input>
+					<input class = "test" type = "number"></input>
+					<input class = "test" type = "number"></input>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class = "column quizzes">
+				<div class = "grade-title">QUIZZES (20%)</div>
+				<div class = "row" id="quizzes">
+					<input class = "quiz" type = "number" value = "100"></input>
+					<input class="quiz" type = "number"></input>
+					<input class="quiz" type = "number"></input>
+					<input class="quiz" type = "number"></input>
+					<input class="quiz" type = "number"></input>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				
+			</div>
+			<div class = "column projects">
+				<div class = "grade-title">PROJECTS (30%)</div>
+				<div class = "row" id="projects">
+					<input class = "project-grade" type = "number" value = "100"></input>
+					<input class="project-grade" type = "number"></input>
+					<input class="project-grade" type = "number"></input>
+					<input class="project-grade" type = "number"></input>
+					<input class="project-grade" type = "number"></input>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class = "column homework">
+				<div class = "grade-title">HOMEWORK (10%)</div>
+				<div class = "row" id="homework">
+					<input class = "hw" type = "number" value = "100"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+					<input class="hw" type = "number"></input>
+				</div>
+				
+			</div>
+		</div>
+		<div class = "grade">
+			<div class="grade-title">GRADE:</div> 
+			<div id = "final-grade"></div>
+		</div>
+		
+	<div class = "rubric-grid">
+		<div class = "grade-title">RUBRIC</div>
+		<div class = "grades">
+			<div>90-100<br />(A)</div>
+			<div>80-89<br />(B)</div>
+			<div>70-79<br />(C)</div>
+			<div>60-69<br />(D)</div>
+			<div>0-59<br />(F)</div>
+		</div>
+	</div>
+</section>
+</div>
+<script src = "../js/grade-sheet.js"></script>
+
+</body>
+</html>

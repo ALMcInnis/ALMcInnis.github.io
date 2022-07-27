@@ -1,0 +1,30 @@
+﻿#snackbar{
+	visibility:hidden;
+	min-width:50%;
+	margin:0 auto;
+	color:#fff;
+	position:fixed;
+	paddng:1em;
+	z-index:2;
+	left:25%;
+	bottom:2em;
+	text-align:center;
+	font-size:2em;
+	filter:drop-shadow(5px 5px 2px #333);
+}
+
+#snackbar.show{
+	visibility:visible;
+	animation:fade-in ease .5s, 
+			  fade-out ease .5s 2.5s;
+}
+
+@keyframes fade-in{
+	0%{bottom:0;opacity:0;}
+	100%{bottom:2em;opacity:1;}
+}
+
+@keyframes fade-out{
+	0%{bottom:2em;opacity:1;}
+	100%{bottom:0;opacity:0;}
+}
