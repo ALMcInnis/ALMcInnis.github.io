@@ -1,13 +1,11 @@
-@import url('../../fonts/fontawesome/css/all.css');
 @import url('car.css');
-/*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');*/
-/*@import url('https://fonts.googleapis.com/css?family=Oxanium');*/
-/*@import url('https://fonts.googleapis.com/css?family=Faustina');*/
-/*@import url('//fonts.googleapis.com/css?family=Abel');*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Oxanium');
+@import url('https://fonts.googleapis.com/css?family=Faustina');
+@import url('//fonts.googleapis.com/css?family=Abel');
 
 @font-face {font-family: "NTF Grand"; 
-src: url("../fonts/NTF-Grand-Regular.otf"),
-url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff2") format("woff2"), 
+src: url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff2") format("woff2"), 
 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.woff") format("woff"), 
 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.ttf") format("truetype"), 
 url("//db.onlinewebfonts.com/t/b30ffe63cc57ffdba315d296d0ca85b0.svg#NTF-Grand-Regular") format("svg"); 
