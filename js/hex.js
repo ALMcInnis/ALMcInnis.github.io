@@ -137,6 +137,7 @@ function displaySnackbar(span){
 	snackbar.innerText = span + " " + "is copied.";
 	snackbar.style.background = span;
 	snackbar.style.color = yiq.contrast;
+	snackbar.style.borderColor = yiq.contrast;
 	setTimeout(removeClass,3000);
 	function removeClass(){
 		snackbar.className = snackbar.className.replace("show","");
