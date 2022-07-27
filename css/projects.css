@@ -457,8 +457,8 @@ button.reset{
 	color:inherit;
 	background:transparent;
 	box-shadow:none;
-	font-size:5vmin;
-	margin:5vh 1em 1em;
+	font-size:1em;
+	margin:2vh 1em 1em;
 }
 
 button.reset:focus{
