@@ -76,7 +76,7 @@ function getContrastYIQ(hexcolor){
 
 function displaySnackbar(span){
 	snackbar.className ="show";
-	snackbar.innerText = span + " " + "is copied.";
+	snackbar.innerText = span + " " + "copied.";
 	snackbar.style.background = span;
 	snackbar.style.color = getContrastYIQ(span);
 	snackbar.style.borderColor = getContrastYIQ(span);
@@ -88,7 +88,7 @@ function displaySnackbar(span){
 
 function displayMsg(msg){
 	snackbar.className ="show";
-	snackbar.innerText = "Palette" + " " +  msg + " " + "is copied.";
+	snackbar.innerText = "Palette" + " " +  msg + " " + "copied.";
 	snackbar.style.background = "#333";
 	snackbar.style.borderColor = "#FFF";
 	setTimeout(removeClass,3000);
