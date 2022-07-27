@@ -10,7 +10,8 @@
 	bottom:2em;
 	text-align:center;
 	font-size:2em;
-	filter:drop-shadow(5px 5px 2px #333);
+	border-radius:20px;
+	border:2px solid;
 }
 
 #snackbar.show{
