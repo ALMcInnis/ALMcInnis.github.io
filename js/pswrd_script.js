@@ -99,8 +99,9 @@ function pswrdMeter(elem){
 
 function displaySnackbar(span){
 	snackbar.className ="show";
-	snackbar.innerText = span + " " + "is copied.";
+	snackbar.innerText = span + " " + "copied.";
 	snackbar.style.background = "#333";
+	snackbar.style.borderColor = "#FFF";
 	setTimeout(removeClass,3000);
 	function removeClass(){
 		snackbar.className = snackbar.className.replace("show","");
