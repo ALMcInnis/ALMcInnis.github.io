@@ -134,7 +134,7 @@ copy.addEventListener("click", function(){
 function displaySnackbar(span){
 	var yiq = contrastText();
 	snackbar.className ="show";
-	snackbar.innerText = span + " " + "is copied.";
+	snackbar.innerText = span + " " + "copied.";
 	snackbar.style.background = span;
 	snackbar.style.color = yiq.contrast;
 	snackbar.style.borderColor = yiq.contrast;
