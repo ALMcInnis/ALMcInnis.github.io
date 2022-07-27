@@ -1,16 +1,16 @@
-﻿#snackbar{
+#snackbar{
 	visibility:hidden;
-	min-width:25%;
+	min-width:50%;
 	margin:0 auto;
 	color:#fff;
 	position:fixed;
-	paddng:1em;
+	padding:.2em;
 	z-index:2;
 	left:25%;
 	bottom:2em;
 	text-align:center;
 	font-size:2em;
-	border-radius:20px;
+	border-radius:25px;
 	border:1px solid;
 }
 
