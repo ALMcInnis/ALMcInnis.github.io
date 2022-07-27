@@ -79,6 +79,7 @@ function displaySnackbar(span){
 	snackbar.innerText = span + " " + "is copied.";
 	snackbar.style.background = span;
 	snackbar.style.color = getContrastYIQ(span);
+	snackbar.style.borderColor = getContrastYIQ(span);
 	setTimeout(removeClass,3000);
 	function removeClass(){
 		snackbar.className = snackbar.className.replace("show","");
@@ -89,6 +90,7 @@ function displayMsg(msg){
 	snackbar.className ="show";
 	snackbar.innerText = "Palette" + " " +  msg + " " + "is copied.";
 	snackbar.style.background = "#333";
+	snackbar.style.borderColor = "#FFF";
 	setTimeout(removeClass,3000);
 	function removeClass(){
 		snackbar.className = snackbar.className.replace("show","");
